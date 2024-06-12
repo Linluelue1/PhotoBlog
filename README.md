@@ -4,7 +4,7 @@
 这是一个用于记录我的摄影日记，也可以分享给爱好摄影的同学或路人我的摄影作品。
 
 ## 截图
-![Uploading image.png…]()
+[![Uploading image.png…]()](https://github.com/Linluelue1/PhotoBlog/blob/main/image.png?raw=true)
 
 
 ## 注意事项
