@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/Mainpage.css">
+    <link rel="stylesheet" href="../Style/TopBanner.css">
+    <script src="../FunctionBox/MainPage.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="icon"></div>
+        <div class="userName">林佳康</div>
+        <div class="label1">个人主页</div>
+        <div class="exit" onclick="exitClick()">退出登录</div>
+    </div>
+
+    <div class="choseBox">
+        <div class="Humanistic">
+            <img src="../imageStore/Humanistic/1.jpg" alt="人文摄影1"><br>
+            <button class="HumanisticButton" style="display: block;" onclick="HumanisticClick()">查看</button>
+            <span>人文摄影</span>
+
+        </div>
+        <div class="Landscape">
+            <img src="../imageStore/Landscape/1.JPG" alt="风光摄影1"><br>
+            <button class="LandscapeButton" style="display: block;" onclick="LandscapeClick()">查看</button>
+            <span>风光摄影</span>
+        </div>
+        <div class="Portrait">
+            <img src="../imageStore/Portrait/1.jpg" alt="人像摄影1"><br>
+            <button class="PortraitButton" style="display: block;" onclick="PortraitClick()">查看</button>
+            <span>人像摄影</span>
+        </div>
+    </div>
+    
+    <footer style="bottom: 0;">
+        所有照片均由本人拍摄,禁止商用盗窃
+    </footer>
+</body>
+</html>

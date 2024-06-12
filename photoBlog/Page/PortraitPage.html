@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/TopBanner.css">
+    <link rel="stylesheet" href="../Style/HLPPage.css">
+    <link rel="stylesheet" href="../Style/Modal.css">
+
+    <script src="../FunctionBox/HLPPage.js"></script>
+    <script src="../FunctionBox/Modal.js" defer></script>
+</head>
+<body>
+    <div class="box">
+        <div class="icon" onclick="exitClick()"></div>
+        <div class="userName">林佳康</div>
+        <div class="label1">人像摄影</div>
+        <div class="exit" onclick="exitClick()">返回主页</div>
+    </div>
+
+    <div class="photo-description">
+        <div class="group group1">
+            <div class="photo firstPhoto" style="max-width: 800px;">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Portrait/10.jpg" alt="1" onclick="openModal(this)">
+                <img src="../imageStore/Portrait/11.jpg" alt="2" onclick="openModal(this)">
+                <img src="../imageStore/Portrait/12.jpg" alt="3" onclick="openModal(this)">
+                
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>模特：天天</h3>
+            </div>
+        </div>
+
+        <div class="group group2">
+            <div class="image-caption">
+                <h3>模特：叶莜</h3>
+            </div>
+            <div class="photo secondPhoto " style="max-width: 800px;">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Portrait/1.jpg" alt="1" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+        </div>
+
+        <div class="group group3">
+            <div class="photo thirdPhoto" style="max-width: 800px;">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Portrait/3.jpg" alt="1" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>模特：Angel</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-buttons">
+            <a id="downloadBtn" class="modal-btn download" download>下载</a>
+            <button class="modal-btn close-btn" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+    
+    <div class="more">
+        <a href="MorePage.html">更多照片分享！</a>
+    </div>
+
+    <footer>
+        所有照片均由本人拍摄,禁止商用盗窃
+    </footer>
+</body>
+</html>

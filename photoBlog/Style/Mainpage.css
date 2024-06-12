@@ -1,0 +1,58 @@
+* {
+    margin: 0; /* 移除所有元素的默认外边距 */
+    border: 0; /* 移除所有元素的默认边框 */
+}
+
+.choseBox {
+    display: grid; /* 启用网格布局 */
+    grid-template-columns: repeat(3, 1fr); /* 创建三列布局，每列占据相等的空间 */
+    gap: 10px; /* 设置网格项之间的间隙为10px */
+    justify-content: center; /* 水平居中对齐网格内的项 */
+    align-items: center; /* 垂直居中对齐网格内的项 */
+    margin-top: 150px; /* 与上一个元素的外边距为150px */
+}
+
+.Humanistic, .Landscape, .Portrait {
+    float: left; /* 使元素左浮动，通常用于旧版布局，这里可能是为了布局效果 */
+    position: relative; /* 设置相对定位，为子元素的绝对定位提供参照 */
+    margin-top: 150px; /* 与上一个元素的外边距为150px */
+    text-align: center; /* 文本居中对齐 */
+    transition: filter 0.3s ease; /* 为滤镜效果添加平滑过渡 */
+}
+
+img {
+    width: 350px; /* 设置图片宽度为350px */
+}
+
+span {
+    text-decoration: underline; /* 文本下划线 */
+    text-shadow: 2px 2px 4px black; /* 设置文本阴影效果 */
+    color: white; /* 文本颜色为白色 */
+    font-size: 30px; /* 文本大小为30px */
+}
+
+.HumanisticButton, .LandscapeButton, .PortraitButton {
+    position: absolute; /* 绝对定位，相对于最近的已定位（relative）祖先元素定位 */
+    top: 50%; /* 距离顶部50%的位置 */
+    left: 50%; /* 距离左侧50%的位置 */
+    transform: translate(-50%, -50%); /* 向左和向上移动自身宽度和高度的50%，实现居中 */
+    padding: 10px 20px; /* 按钮内边距 */
+    border: none; /* 移除按钮边框 */
+    background-color: #000; /* 按钮背景颜色为黑色 */
+    color: #fff; /* 按钮文字颜色为白色 */
+    border-radius: 5px; /* 按钮边框圆角为5px */
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+    opacity: 0; /* 按钮初始时完全透明 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 为透明度和位置变化添加平滑过渡 */
+    pointer-events: none; /* 初始时忽略鼠标事件，按钮不可点击 */
+}
+
+.Humanistic:hover img, .Landscape:hover img, .Portrait:hover img {
+    filter: blur(5px); /* 鼠标悬停时应用模糊效果，数值可以根据需要调整 */
+}
+
+.Humanistic:hover .HumanisticButton, .Landscape:hover .LandscapeButton, .Portrait:hover .PortraitButton {
+    display: block; /* 鼠标悬停时显示按钮 */
+    opacity: 1; /* 按钮完全不透明，完全可见 */
+    pointer-events: auto; /* 鼠标悬停时允许鼠标事件，按钮可点击 */
+}

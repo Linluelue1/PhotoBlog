@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/TopBanner.css">
+    <link rel="stylesheet" href="../Style/Modal.css">
+    <link rel="stylesheet" href="../Style/MorePage.css">
+    <script src="../FunctionBox/Modal.js" defer></script>
+    <script>
+        function exitClick(){
+            window.location.href = 'MainPage.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="icon" onclick="exitClick()"></div>
+        <div class="userName">林佳康</div>
+        <div class="label1">更多摄影</div>
+
+        <div class="exit" onclick="exitClick()">返回主页</div>
+    </div>
+
+    <div class="line">
+        <div class="photo 1"><img src="../imageStore/MorePhoto/3.jpg" alt="11" onclick="openModal(this)"></div>
+        <div class="photo 2"><img src="../imageStore/MorePhoto/4.jpg" alt="12" onclick="openModal(this)"></div>
+        <div class="photo 3"><img src="../imageStore/MorePhoto/11.jpg" alt="13" onclick="openModal(this)"></div>
+        <div class="photo 4"><img src="../imageStore/MorePhoto/12.jpg" alt="14" onclick="openModal(this)"></div>
+        <div class="photo 5"><img src="../imageStore/MorePhoto/13.jpg" alt="15" onclick="openModal(this)"></div>
+    </div>
+
+    <div class="line">
+        <div class="photo 1"><img src="../imageStore/MorePhoto/17.jpg" alt="21" onclick="openModal(this)"></div>
+        <div class="photo 2"><img src="../imageStore/MorePhoto/18.jpg" alt="22" onclick="openModal(this)"></div>
+        <div class="photo 3"><img src="../imageStore/MorePhoto/7.jpg" alt="23" onclick="openModal(this)"></div>
+        <div class="photo 4"><img src="../imageStore/MorePhoto/9.jpg" alt="24" onclick="openModal(this)"></div>
+        <div class="photo 5"><img src="../imageStore/MorePhoto/10.jpg" alt="25" onclick="openModal(this)"></div>
+    </div>
+
+    <div class="line">
+        <div class="photo 1"><img src="../imageStore/MorePhoto/1.jpg" alt="31" onclick="openModal(this)"></div>
+        <div class="photo 2"><img src="../imageStore/MorePhoto/2.jpg" alt="32" onclick="openModal(this)"></div>
+        <div class="photo 3"><img src="../imageStore/MorePhoto/5.jpg" alt="33" onclick="openModal(this)"></div>
+        <div class="photo 4"><img src="../imageStore/MorePhoto/6.jpg" alt="34" onclick="openModal(this)"></div>
+        <div class="photo 5"><img src="../imageStore/MorePhoto/8.jpg" alt="35" onclick="openModal(this)"></div>
+    </div>
+
+    <div class="line">
+        <div class="photo 1"><img src="../imageStore/MorePhoto/14.jpg" alt="41" onclick="openModal(this)"></div>
+        <div class="photo 2"><img src="../imageStore/MorePhoto/15.jpg" alt="42" onclick="openModal(this)"></div>
+        <div class="photo 3"><img src="../imageStore/MorePhoto/16.jpg" alt="43" onclick="openModal(this)"></div>
+        <div class="photo 4"><img src="../imageStore/MorePhoto/19.jpg" alt="44" onclick="openModal(this)"></div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-buttons">
+            <a id="downloadBtn" class="modal-btn download" download>下载</a>
+            <button class="modal-btn close-btn" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+
+    <footer>
+        所有照片均由本人拍摄,禁止商用盗窃
+    </footer>
+
+</body>
+</html>

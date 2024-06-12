@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/TopBanner.css">
+    <link rel="stylesheet" href="../Style/HLPPage.css">
+    <link rel="stylesheet" href="../Style/Modal.css">
+    
+    <script src="../FunctionBox/HLPPage.js"></script>
+    <script src="..../FunctionBox/Modal.js" defer></script>
+    
+</head>
+<body>
+    <div class="box">
+        <div class="icon" onclick="exitClick()"></div>
+        <div class="userName">林佳康</div>
+        <div class="label1">人文摄影</div>
+        <div class="exit" onclick="exitClick()">返回主页</div>
+    </div>
+
+    <div class="photo-description">
+        <div class="group group1">
+            <div class="photo firstPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Humanistic/4.jpg" alt="1" onclick="openModal(this)">
+                <img src="../imageStore/Humanistic/3.jpg" alt="2" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>孤独</h3>
+                <p>照片是拍摄于<strong>香港特别行政区元朗区</strong>的一处公园附近，隔壁是许多老人在打牌，聊天</p>
+                <p>唯独这位老人穿着朴素独坐在石阶旁低着头不知在思索着什么，代入其中感受到老人的孤独感</p>
+                <p>所以举起相机按下快门，记录下这特别的瞬间。</p>
+                <br><br>
+                <p>第二照片是拍摄于<strong>香港特别行政区深水埗附近海滨公园</strong></p>
+                <p>炎炎夏日中，老人带着草帽在栏杆外挥钓鱼竿，在香港这个快节奏的生活城市，看着老人悠然的钓鱼，仿佛心灵得到了些许的净化</p>
+                <p>所以举起相机按下快门，记录下这特别的瞬间。</p>
+            </div>
+        </div>
+
+        <div class="group group2">
+            <div class="image-caption">
+                <h3>茁壮成长</h3>
+                <p>照片是拍摄于<strong>中国福建省厦门市鼓浪屿</strong></p>
+                <p>照片中的大人和小孩子都在愉快的玩耍，我们每一个人都有着这样的童年，但是回首往昔，我们也像小朋友一样和家长渐行渐远。</p>
+                <p>思绪万千，感慨万分，所以举起相机按下快门，记录下这特别的瞬间。</p>
+            </div>
+            <div class="photo secondPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Humanistic/5.jpg" alt="1" onclick="openModal(this)">
+                <img src="../imageStore/Humanistic/6.jpg" alt="2" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+        </div>
+
+        <div class="group group3">
+            <div class="photo thirdPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Humanistic/2.jpg" alt="1" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>长大</h3>
+                <p>该照片是拍摄于<strong>香港特别行政区湾仔</strong>电车上</p>
+                <p>和朋友一起在香港著名的“叮叮车”上，朋友正望向窗外思索着什么</p>
+                <p>疫情期间人人都必须带着口罩，人们的内心也被随之封闭</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-buttons">
+            <a id="downloadBtn" class="modal-btn download" download>下载</a>
+            <button class="modal-btn close-btn" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+
+    <div class="more">
+        <a href="MorePage.html">更多照片分享！</a>
+    </div>
+    
+    <footer>
+        所有照片均由本人拍摄,禁止商用盗窃
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/Login.css">
+    <script src="../FunctionBox/Login.js"></script>
+</head>
+<body>
+    <div class="loginForm">
+        <h1>PhotoBlog</h1>
+        <!-- 账号的label和input -->
+        <div class="account">
+            <span class="accountLabel">账号：</span>
+            <input class="accountInput" type="text" value="admin">
+        </div>
+
+        <!-- 密码的label和input -->
+        <div class="password">
+            <span class="passwordLabel">密码：</span>
+            <input class="passwordInput" type="password" value="123">
+        </div>
+
+        <div class="confirmPassword" style="display: none;">
+            <span class="confirmPasswordLabel">确认密码：</span>
+            <input class="confirmPasswordInput" type="password">
+        </div>
+
+        <!-- 按钮 -->
+         <div class="loginBox">
+            <div class="login">
+                <button class="loginButton" onclick="validAccount()">登录</button>
+            </div>
+            <div class="register">
+                <button class="registerButton" onclick="registerButton()">注册</button>
+            </div>
+            <div class="register2" style="display: none;">
+                <button class="registerButton2" onclick="registerButton2()">注册</button>
+            </div>
+         </div>
+    </div>
+</body>
+</html>

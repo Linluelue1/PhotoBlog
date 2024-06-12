@@ -1,0 +1,110 @@
+* {
+    margin: 0; /* 移除所有元素的默认外边距 */
+    border: 0; /* 移除所有元素的默认边框 */
+}
+
+html {
+    background-repeat: no-repeat; /* 网页背景图片不重复 */
+}
+
+body {
+    background-image: url(../imageStore/LoginBackgroundIMG.JPG); /* 设置背景图片 */
+    background-size: 100% 100%; /* 背景图片铺满整个页面 */
+    background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+}
+
+.box {
+    position: fixed; /* 固定定位，相对于浏览器窗口定位 */
+    background-color: black; /* 背景颜色为黑色 */
+    width: 100%; /* 宽度占满整个视口 */
+    height: 150px; /* 高度为150px */
+    overflow: hidden; /* 隐藏超出部分 */
+    z-index: 1000; /* 层级较高，确保在页面最上层 */
+    top: 0; /* 距离顶部0px */
+}
+
+.icon {
+    float: left; /* 左浮动，使元素在容器内靠左对齐 */
+    background-image: url(../imageStore/icon1.jpeg); /* 设置图标背景图片 */
+    width: 150px; /* 宽度为150px */
+    height: 148px; /* 高度为148px */
+    background-size: 100% 100%; /* 背景图片铺满整个元素 */
+    margin-left: 50px; /* 与容器左侧的距离为50px */
+}
+
+.icon:hover {
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+}
+
+.userName {
+    float: left; /* 左浮动 */
+    color: black; /* 文字颜色为黑色 */
+    background-color: white; /* 背景颜色为白色 */
+    margin-top: 25px; /* 与容器顶部的距离为25px */
+    font-size: 25px; /* 字体大小为25px */
+    margin-left: 10px; /* 与容器左侧的距离为10px */
+    width: 180px; /* 宽度为180px */
+    text-align: center; /* 文本居中对齐 */
+    border-radius: 5px; /* 边框圆角 */
+}
+
+.label1 {
+    position: absolute; /* 绝对定位，相对于最近的已定位（relative）祖先元素定位 */
+    margin-left: 260px; /* 与容器左侧的距离为260px */
+    margin-top: 70px; /* 与容器顶部的距离为70px */
+    font-size: 20px; /* 字体大小为20px */
+    color: white; /* 文字颜色为白色 */
+}
+
+.exit {
+    float: right; /* 右浮动 */
+    font-size: 20px; /* 字体大小为20px */
+    color: white; /* 文字颜色为白色 */
+    margin-right: 50px; /* 与容器右侧的距离为50px */
+    margin-top: 50px; /* 与容器顶部的距离为50px */
+}
+
+.exit:hover {
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+}
+
+/* 基础样式 */
+.more {
+    text-align: center; /* 文本居中 */
+    margin-top: 100px; /* 上外边距 */
+    padding: 20px; /* 内边距 */
+    background-color: #f0f0f0; /* 背景颜色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: all 0.3s ease; /* 所有属性的过渡效果 */
+}
+
+/* 鼠标悬停效果 */
+.more:hover {
+    background-color: #e9e9e9; /* 鼠标悬停时的背景颜色 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的阴影效果 */
+}
+
+/* 链接样式 */
+.more a {
+    font-size: 18px; /* 字体大小 */
+    color: #333; /* 字体颜色 */
+    text-decoration: none; /* 去除下划线 */
+    font-weight: bold; /* 字体加粗 */
+    transition: color 0.3s ease; /* 字体颜色的过渡效果 */
+}
+
+/* 链接鼠标悬停效果 */
+.more a:hover {
+    color: #007bff; /* 鼠标悬停时的字体颜色 */
+}
+
+footer {
+    background-color: black; /* 页脚背景色 */
+    padding-top: 20px; /* 顶部内边距 */
+    padding-bottom: 20px; /* 底部内边距 */
+    text-align: center; /* 文本居中 */
+    font-size: 0.9em; /* 字体大小 */
+    color: white; /* 文字颜色 */
+    position: absolute; /* 绝对定位 */
+    width: 100%; /* 宽度占满整个视口 */
+}

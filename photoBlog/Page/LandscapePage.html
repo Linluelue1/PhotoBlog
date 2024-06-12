@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBlog</title>
+    <link rel="stylesheet" href="../Style/TopBanner.css">
+    <link rel="stylesheet" href="../Style/HLPPage.css">
+    <link rel="stylesheet" href="../Style/Modal.css">
+
+    <script src="../FunctionBox/HLPPage.js"></script>
+    <script src="../FunctionBox/Modal.js" defer></script>
+    
+</head>
+<body>
+    <div class="box">
+        <div class="icon" onclick="exitClick()"></div>
+        <div class="userName">林佳康</div>
+        <div class="label1">风光摄影</div>
+        <div class="exit" onclick="exitClick()">返回主页</div>
+    </div>
+
+    <div class="photo-description">
+        <div class="group group1">
+            <div class="photo firstPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Landscape/1.jpg" alt="1" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/16.jpg" alt="2" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/6.jpg" alt="3" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/15.jpg" alt="4" onclick="openModal(this)">
+                
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>风光合集</h3>
+                <p>每一张的风光照片都包含了摄影师的汗水，既要翻山涉水，又要风雨无阻，这个照片集中都是在机缘巧合中拍摄的，记录下的瞬间，就是永恒。</p>
+                <p>每一张照片都是独一无二的</p>
+            </div>
+        </div>
+
+        <div class="group group2">
+            <div class="image-caption">
+                <h3>天际100</h3>
+                <p>香港高耸入云的建筑，拍摄当天刚好天气带点雾，使这栋大楼看着若隐若现，或许世界上的每一栋大楼都在注视着这个城市发展的一点一滴</p>
+            </div>
+            <div class="photo secondPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Landscape/14.jpg" alt="1" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+        </div>
+
+        <div class="group group3">
+            <div class="photo thirdPhoto">
+                <button class="arrow prev">&#10094;</button> <!-- Unicode字符左箭头 -->
+                <img src="../imageStore/Landscape/2.jpg" alt="1" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/7.jpg" alt="2" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/8.jpg" alt="3" onclick="openModal(this)">
+                <img src="../imageStore/Landscape/10.jpg" alt="4" onclick="openModal(this)">
+                <button class="arrow next">&#10095;</button> <!-- Unicode字符右箭头 -->
+            </div>
+            <div class="image-caption">
+                <h3>日落合集</h3>
+                <p>日落就是每个摄影拍过最美好的事物,就好比我们的青春，在巅峰一刻，是世界上最耀眼的太阳！但黄昏之后却是漫漫的黑夜</p>
+                <p>夕阳无限好，只是近黄昏</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-buttons">
+            <a id="downloadBtn" class="modal-btn download" download>下载</a>
+            <button class="modal-btn close-btn" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+
+    <div class="more">
+        <a href="MorePage.html">更多照片分享！</a>
+    </div>
+    
+    <footer>
+        所有照片均由本人拍摄,禁止商用盗窃
+    </footer>
+</body>
+</html>

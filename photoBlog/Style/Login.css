@@ -1,0 +1,111 @@
+* {
+    margin: 0; /* 移除所有元素的外边距 */
+    border: 0; /* 移除所有元素的边框 */
+}
+
+body {
+    background-image: url(../imageStore/LoginBackgroundIMG.JPG); /* 设置背景图片 */
+    background-size: 100%; /* 背景图片铺满整个页面 */
+}
+
+.loginForm {
+    width: 413px; /* 设置表单框的宽度 */
+    height: 604px; /* 设置表单框的高度 */
+    padding: 20px; /* 设置表单框的内边距 */
+    margin-left: 65%; /* 设置表单框左外边距，向右移动 */
+    margin-top: 238px; /* 设置表单框上外边距，向下移动 */
+    border: 1px solid #464545; /* 设置表单框的边框颜色 */
+    background-color: black; /* 设置表单框的背景颜色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置表单框的轻微阴影效果 */
+    font-family: Arial, sans-serif; /* 设置表单框的字体 */
+    opacity: 0.4; /* 设置表单框的透明度 */
+    text-align: center; /* 设置文本居中对齐 */
+    overflow: hidden; /* 隐藏超出表单框的部分 */
+    transition: transform 0.5s ease; /* 设置表单框的平滑移动动画效果 */
+}
+
+h1 {
+    margin-top: 30px; /* 设置标题上外边距 */
+    color: white; /* 设置标题颜色为白色 */
+    font-size: 70px; /* 设置标题字体大小 */
+}
+
+.account {
+    margin-top: 100px; /* 设置账户输入框上外边距 */
+    margin-left: 40px; /* 设置账户输入框左外边距 */
+    color: white; /* 设置账户输入框文字颜色 */
+}
+
+.password {
+    margin-left: 40px; /* 设置密码输入框左外边距 */
+}
+
+.password, .confirmPassword {
+    margin-top: 50px; /* 设置密码和确认密码输入框上外边距 */
+    color: white; /* 设置密码和确认密码输入框文字颜色 */
+}
+
+.accountLabel, .passwordLabel, .confirmPasswordLabel {
+    font-size: 21px; /* 设置标签字体大小 */
+}
+
+.accountInput, .passwordInput, .confirmPasswordInput {
+    border: none; /* 移除输入框边框 */
+    border-bottom: 1px solid white; /* 设置输入框底部边框颜色 */
+    margin-bottom: 2px; /* 设置输入框下外边距 */
+    outline: none; /* 移除输入框聚焦时的轮廓 */
+    background: transparent; /* 设置输入框背景透明 */
+    font-size: 21px; /* 设置输入框字体大小 */
+    color: white; /* 设置输入框文字颜色 */
+    padding: 10px 0; /* 设置输入框内边距 */
+    margin-top: 0; /* 设置输入框上外边距为0 */
+    margin-bottom: 0; /* 设置输入框下外边距为0 */
+}
+
+input:focus {
+    border-bottom: 2px solid #333; /* 输入框聚焦时底部边框颜色加深 */
+}
+
+.loginBox {
+    margin-top: 80px; /* 设置登录按钮上外边距 */
+    text-align: left; /* 设置文本左对齐 */
+}
+
+/* Button的CSS */
+.loginButton, .registerButton, .registerButton2 {
+    margin-left: 60px; /* 设置按钮左外边距 */
+    padding: 15px 20px; /* 设置按钮内边距 */
+    font-size: 16px; /* 设置按钮文字大小 */
+    font-weight: bold; /* 设置按钮文字为粗体 */
+    color: black; /* 设置按钮文字颜色 */
+    background-color: white; /* 设置按钮背景颜色 */
+    border: none; /* 移除按钮边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    cursor: pointer; /* 设置鼠标悬停时显示指针手势 */
+    transition: background-color 0.3s; /* 设置按钮背景颜色的平滑过渡效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 设置按钮的轻微阴影效果 */
+    outline: none; /* 移除按钮聚焦时的轮廓 */
+    text-align: center; /* 设置按钮文字居中 */
+    text-decoration: none; /* 移除按钮文字下划线 */
+    display: inline-block; /* 设置按钮可以设置宽高 */
+}
+
+.login {
+    margin-right: 0; /* 设置登录按钮右外边距为0 */
+    float: left; /* 使登录按钮左浮动 */
+}
+
+.register {
+    float: right; /* 使注册按钮右浮动 */
+    text-align: right; /* 设置注册按钮文本右对齐 */
+    margin-right: 60px; /* 设置注册按钮右外边距 */
+}
+
+.loginButton:hover, .registerButton:hover {
+    background-color: rgb(134, 132, 132); /* 鼠标悬停在登录或注册按钮上时改变背景颜色 */
+}
+
+.loginButton:active, .registerButton:active {
+    background-color: #332f2f; /* 点击登录或注册按钮时改变背景颜色 */
+    box-shadow: none; /* 点击时移除阴影，模拟按下效果 */
+}

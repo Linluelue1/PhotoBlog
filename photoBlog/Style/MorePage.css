@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    border: 0;
+}
+
+
+.line img{
+    width: 350px;
+    border-radius: 5%;
+}
+
+.line{
+    
+    display: grid;          /* 启用Grid布局 */
+    grid-template-columns: repeat(5, 1fr); /* 创建三列，每列等宽 */
+    gap: 10px;               /* 网格项之间的间隙 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    margin-top: 10%;
+    margin-left: 4%;
+    transition: filter 0.3s ease; /* 平滑过渡效果 */
+}
+
+.line img:hover{
+    filter: blur(5px); /* 应用模糊效果，数值可以根据需要调整 */
+}

@@ -1,0 +1,93 @@
+body.modal-open {
+    overflow: hidden; /* 当模态框打开时，隐藏页面滚动条 */
+}
+
+.modal {
+    display: none; /* 模态框默认不显示 */
+    position: fixed; /* 固定定位，相对于浏览器窗口定位 */
+    z-index: 1000; /* 设置较高的层级，确保模态框在页面最上层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 模态框宽度占满整个视口 */
+    height: 100%; /* 模态框高度占满整个视口 */
+    overflow: auto; /* 如果内容超出，允许滚动 */
+    background-color: rgba(0, 0, 0, 0.9); /* 设置模态框背景颜色，半透明黑色 */
+}
+
+.modal-content {
+    display: block; /* 模态框内容显示为块级元素 */
+    margin: 5% auto; /* 从上向下和从左向右自动外边距，居中显示 */
+    max-width: 80%; /* 内容的最大宽度为视口宽度的80% */
+    max-height: 80%; /* 内容的最大高度为视口高度的80% */
+    border-radius: 10px; /* 边框圆角 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    animation: zoom 0.3s; /* 应用zoom动画 */
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} /* 动画开始时，内容大小为0 */
+    to {transform: scale(1)} /* 动画结束时，内容大小正常 */
+}
+
+.close {
+    position: absolute; /* 绝对定位，相对于最近的已定位（relative）祖先元素定位 */
+    top: 15px; /* 距离顶部15px */
+    right: 40px; /* 距离右侧40px */
+    color: #fff; /* 文字颜色为白色 */
+    font-size: 40px; /* 字体大小为40px */
+    font-weight: bold; /* 字体加粗 */
+    transition: 0.3s; /* 颜色变化过渡效果 */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* 鼠标悬停或聚焦时颜色变浅 */
+    text-decoration: none; /* 移除下划线 */
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+}
+
+.modal-buttons {
+    position: absolute; /* 绝对定位 */
+    top: 20px; /* 距离顶部20px */
+    right: 40px; /* 距离右侧40px */
+    display: flex; /* 使用flex布局 */
+    gap: 10px; /* 按钮之间的间隙 */
+}
+
+.modal-btn {
+    background-color: #555; /* 按钮背景颜色 */
+    border: none; /* 无边框 */
+    color: white; /* 文字颜色为白色 */
+    padding: 10px 20px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 移除下划线 */
+    display: inline-block; /* 内联块级元素 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时显示指针手势 */
+    border-radius: 5px; /* 边框圆角 */
+    transition: background-color 0.3s; /* 背景颜色变化过渡效果 */
+}
+
+.modal-btn.download {
+    background-color: #28a745; /* 下载按钮的特殊背景颜色 */
+}
+
+.modal-btn.download:hover {
+    background-color: #218838; /* 下载按钮鼠标悬停时的背景颜色 */
+}
+
+.modal-btn.close-btn {
+    background-color: #dc3545; /* 关闭按钮的特殊背景颜色 */
+}
+
+.modal-btn.close-btn:hover {
+    background-color: #c82333; /* 关闭按钮鼠标悬停时的背景颜色 */
+}
+
+/* 背景模糊效果 */
+body.modal-open .photo-description,
+body.modal-open .box,
+body.modal-open footer {
+    filter: blur(5px); /* 当模态框打开时，背景元素应用模糊效果 */
+}

@@ -1,0 +1,107 @@
+strong {
+    font-size: 25px; /* 将strong标签的字体大小设置为25px */
+}
+
+.photo-description {
+    display: flex; /* 使用flex布局，使得子元素可以灵活排列 */
+    align-items: center; /* 子元素在交叉轴上居中对齐 */
+    margin-bottom: 20px; /* 与下个兄弟元素的外边距为20px */
+    flex-direction: column; /* 子元素垂直排列 */
+}
+
+.group {
+    margin-top: 250px; /* 与上个兄弟元素的外边距为250px */
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 子元素在交叉轴上居中对齐 */
+    position: relative; /* 设置为相对定位，为子元素的绝对定位提供参照 */
+}
+
+.photo {
+    flex: 3; /* 赋予3份flex比例，使得元素比其他元素大 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    margin: 0 auto; /* 上下外边距为0，左右自动（居中） */
+    max-width: 600px; /* 最大宽度为600px */
+    position: relative; /* 相对定位，为子元素的绝对定位提供参照 */
+    display: block; /* 使元素作为块级元素显示 */
+}
+
+.firstPhoto, .group2 .image-caption, .thirdPhoto {
+    margin-right: 300px; /* 与右边元素的外边距为300px */
+}
+
+.photo img {
+    width: 100%; /* 图片宽度占满容器宽度 */
+    height: auto; /* 高度自适应，保持图片比例 */
+    border-radius: 20px; /* 边框圆角为20px */
+    transition: transform 0.3s ease; /* 变换效果在0.3秒内平滑过渡 */
+}
+
+.photo:hover img {
+    transform: scale(1.05); /* 鼠标悬停时图片放大至105% */
+}
+
+.image-caption {
+    flex: 1; /* 赋予1份flex比例，占据剩余空间 */
+    padding: 20px; /* 内边距为20px */
+    box-sizing: border-box; /* 边框计算在宽度内 */
+    background-color: #fff; /* 背景颜色为白色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    color: #333; /* 文字颜色为深灰色 */
+    border-radius: 10px; /* 边框圆角为10px */
+    text-align: left; /* 文本左对齐 */
+}
+
+.image-caption h3 {
+    margin: 0 0 10px; /* 上外边距为0，下外边距为10px */
+    font-size: 2em; /* 字体大小为2倍当前字体大小 */
+}
+
+.image-caption p {
+    margin: 0 0 10px; /* 上外边距为0，下外边距为10px */
+    font-size: 1em; /* 字体大小为当前字体大小 */
+    line-height: 1.6; /* 行高为1.6倍字体大小 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .photo-description {
+        flex-direction: column; /* 在屏幕宽度小于768px时，子元素垂直排列 */
+    }
+
+    .firstPhoto {
+        margin-right: 0; /* 在屏幕宽度小于768px时，去除右侧外边距 */
+    }
+
+    .firstPhoto img {
+        border-radius: 0; /* 在屏幕宽度小于768px时，去除图片边框圆角 */
+    }
+}
+
+.arrow {
+    position: absolute; /* 绝对定位，相对于最近的已定位（relative）祖先元素定位 */
+    top: 50%; /* 距离顶部50%的位置 */
+    transform: translateY(50%); /* 上移自身高度的50%，实现垂直居中 */
+    background-color: transparent; /* 背景色透明 */
+    border: none; /* 无边框 */
+    color: white; /* 字体颜色为白色 */
+    cursor: pointer; /* 鼠标悬停时显示为指针形状 */
+    font-size: 24px; /* 字体大小为24px */
+    padding: 5px; /* 内边距为5px */
+    z-index: 10; /* 确保在图片上层显示 */
+}
+
+.arrow:hover {
+    color: #ddd; /* 鼠标悬停时字体颜色变深 */
+}
+
+.prev {
+    left: 10px; /* 左边距为10px */
+}
+
+.next {
+    right: 10px; /* 右边距为10px */
+}
+
+.active {
+    opacity: 1; /* 元素完全不透明 */
+}
